@@ -1,0 +1,14 @@
+name: Redfox
+type: theme
+description: 'Theme inspired by the fluffiest creature on earth.'
+package: Core
+# version: VERSION
+# core: 8.x
+base theme: false
+
+regions:
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  content_top: 'Content Top'
+  content: 'Content'
+  content_bottom: 'Content Bottom'
