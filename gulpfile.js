@@ -47,7 +47,7 @@ gulp.task('sass', ['refresh'], function() {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('watch', ['sass', 'jade'], function () {
+gulp.task('watch', ['sass'], function () {
   gulp.watch('gulp/sass/**/*.sass', ['sass']);
 });
 
