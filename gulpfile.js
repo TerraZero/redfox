@@ -27,9 +27,9 @@ var TZ = {
     var includes = '';
 
     for (var index in components) {
-      components[index] = '@include components/' + components[index];
+      components[index] = '@import \'components/' + components[index] + '\'';
     }
-    components.unshift('@include vars');
+    components.unshift('@import \'vars\'');
     return components.join('\n') + '\n';
   },
 
@@ -41,7 +41,7 @@ gulp.task('refresh', function() {
 
 gulp.task('jade', function(){
   return gulp.src(['gulp/jade/**/*.jade', '!gulp/jade/mixins.jade'])
-    .pipe(insert.prepend('include ../../mixins\n'))
+    .pipe(insert.prepend('include ../mixins\n'))
     .pipe(jade().on('error', function(e) {
       console.log(e.toString());
     }))
