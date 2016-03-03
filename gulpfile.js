@@ -1,9 +1,7 @@
 var gulp   = require('gulp');
 var sass   = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
-var rename = require('gulp-rename');
 var insert = require('gulp-insert');
-var jade   = require('gulp-jade');
 var fs     = require('fs');
 
 var TZ = {
@@ -39,18 +37,6 @@ gulp.task('refresh', function() {
   TZ.components = null;
 });
 
-gulp.task('jade', function(){
-  return gulp.src(['gulp/jade/**/*.jade', '!gulp/jade/mixins.jade'])
-    .pipe(insert.prepend('include ../mixins\n'))
-    .pipe(jade().on('error', function(e) {
-      console.log(e.toString());
-    }))
-    .pipe(rename(function(path){
-      path.extname = '.tpl.php';
-    }))
-    .pipe(gulp.dest('templates'));
-});
-
 gulp.task('sass', ['refresh'], function() {
   return gulp.src('gulp/sass/main.sass')
     .pipe(insert.prepend(TZ.includesSass()))
@@ -63,7 +49,6 @@ gulp.task('sass', ['refresh'], function() {
 
 gulp.task('watch', ['sass', 'jade'], function () {
   gulp.watch('gulp/sass/**/*.sass', ['sass']);
-  gulp.watch('gulp/jade/**/*.jade', ['jade']);
 });
 
 gulp.task('default', ['watch']);
