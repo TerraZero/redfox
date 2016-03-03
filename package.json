@@ -1,0 +1,19 @@
+{
+  "name": "redfox",
+  "version": "1.0.0",
+  "description": "redfox simple component theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TerraZero/redfox.git"
+  },
+  "author": "TerraZero",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/TerraZero/redfox/issues"
+  },
+  "homepage": "https://github.com/TerraZero/redfox#readme"
+}
