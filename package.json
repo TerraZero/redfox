@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/TerraZero/redfox/issues"
   },
-  "homepage": "https://github.com/TerraZero/redfox#readme"
+  "homepage": "https://github.com/TerraZero/redfox#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0"
+  }
 }
